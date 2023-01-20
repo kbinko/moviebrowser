@@ -1,9 +1,13 @@
 import Hero from "./hero";
 
-const SearchView = () => {
+const SearchView = ({ keyword, searchResults }) => {
+	const title = `You are searching for ${keyword}`;
+
+	const resultsHTML = searchResults.map((obj, i) => {});
+
 	return (
 		<div>
-			<Hero text="You are searching for..." />
+			<Hero text={title} />
 		</div>
 	);
 };
