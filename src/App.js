@@ -13,7 +13,7 @@ import MovieView from "./components/MovieView.js";
 function App() {
 	const [searchResults, setSearchResults] = useState([]);
 	const [searchText, setSearchText] = useState(" ");
-
+    
 	useEffect(() => {
 		if (searchText !== " ") {
 			fetch(
