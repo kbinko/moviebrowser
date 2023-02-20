@@ -15,7 +15,6 @@ const MovieCard = ({ movie }) => {
 				/>
 				<div className="card-body">
 					<h5 className="card-title">{movie.original_title}</h5>
-					<p className="card-text">{movie.overview}</p>
 					<Link
 						to={movieUrl}
 						className="btn btn-primary">
