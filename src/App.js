@@ -6,6 +6,7 @@ import AboutView from "./components/about.js";
 import SearchView from "./components/SearchView.js";
 import { Switch, Route } from "react-router-dom";
 import MovieView from "./components/MovieView.js";
+import Error from "./components/error.js";
 
 // TMDB API key = 815c72f987b4f062f4a312f99bed13da
 // example link = https://api.themoviedb.org/3/search/movie?api_key=815c72f987b4f062f4a312f99bed13da&language=en-US&query=Star%20Wars&page=1&include_adult=false
@@ -13,7 +14,7 @@ import MovieView from "./components/MovieView.js";
 function App() {
 	const [searchResults, setSearchResults] = useState([]);
 	const [searchText, setSearchText] = useState(" ");
-    
+
 	useEffect(() => {
 		if (searchText !== " ") {
 			fetch(
@@ -55,6 +56,9 @@ function App() {
 					path="/movies/:id"
 					component={MovieView}
 				/>
+				<Route path="*">
+					<Error />
+				</Route>
 			</Switch>
 		</div>
 	);

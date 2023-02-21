@@ -54,7 +54,10 @@ function Navbar({ searchText, setSearchText }) {
 					</ul>
 					<form
 						className="d-flex"
-						role="search">
+						onSubmit={(e) => {
+							e.preventDefault();
+							history.push("/search");
+						}}>
 						<input
 							className="form-control me-2"
 							type="search"
