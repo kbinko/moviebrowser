@@ -1,7 +1,7 @@
 import Hero from "./hero";
 
 const Home = () => {
-    return (
+	return (
 		<div>
 			<Hero text="Welcome to react 201" />
 			<div className="container">

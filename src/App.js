@@ -32,30 +32,16 @@ function App() {
 
 	return (
 		<div>
-			<Navbar
-				searchText={searchText}
-				setSearchText={setSearchText}
-			/>
+			<Navbar searchText={searchText} setSearchText={setSearchText} />
 			<Switch>
-				<Route
-					path="/"
-					exact>
+				<Route path="/moviebrowser/" exact>
 					<Home />
 				</Route>
-				<Route
-					path="/about"
-					component={AboutView}
-				/>
+				<Route path="/about" component={AboutView} />
 				<Route path="/search">
-					<SearchView
-						keyword={searchText}
-						searchResults={searchResults}
-					/>
+					<SearchView keyword={searchText} searchResults={searchResults} />
 				</Route>
-				<Route
-					path="/movies/:id"
-					component={MovieView}
-				/>
+				<Route path="/movies/:id" component={MovieView} />
 				<Route path="*">
 					<Error />
 				</Route>
