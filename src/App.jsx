@@ -32,6 +32,7 @@ function App() {
 
 	return (
 		<div>
+<<<<<<< HEAD:src/App.js
 			<Navbar searchText={searchText} setSearchText={setSearchText} />
 			<Switch>
 				<Route path="/moviebrowser/" exact>
@@ -42,10 +43,22 @@ function App() {
 					<SearchView keyword={searchText} searchResults={searchResults} />
 				</Route>
 				<Route path="/movies/:id" component={MovieView} />
+=======
+			<Navbar searchText={searchText} setSearchText={setSearchText} />{" "}
+			<Switch>
+				<Route path="/" exact>
+					<Home />
+				</Route>{" "}
+				<Route path="/about" component={AboutView} />{" "}
+				<Route path="/search">
+					<SearchView keyword={searchText} searchResults={searchResults} />{" "}
+				</Route>{" "}
+				<Route path="/movies/:id" component={MovieView} />{" "}
+>>>>>>> 4572e46 (s):src/App.jsx
 				<Route path="*">
 					<Error />
-				</Route>
-			</Switch>
+				</Route>{" "}
+			</Switch>{" "}
 		</div>
 	);
 }

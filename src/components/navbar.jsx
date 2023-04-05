@@ -26,6 +26,7 @@ function Navbar({ searchText, setSearchText }) {
 	return (
 		<ReactstrapNavbar color="light" light expand="md">
 			<div className="container-fluid">
+<<<<<<< HEAD:src/components/navbar.js
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="navbar-nav me-auto" navbar>
@@ -46,6 +47,35 @@ function Navbar({ searchText, setSearchText }) {
 						</NavItem>
 						<NavItem>
 							<NavLink tag={Link} to="/" disabled>
+=======
+				<Link className="navbar-brand" to="/">
+					Movie Browser
+				</Link>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon"></span>
+				</button>
+				<div className="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+						<li className="nav-item">
+							<Link className="nav-link active" aria-current="page" to="/">
+								Home
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/about">
+								About
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link disabled" to="/">
+>>>>>>> 4572e46 (s):src/components/navbar.jsx
 								coming soon
 							</NavLink>
 						</NavItem>
@@ -56,6 +86,7 @@ function Navbar({ searchText, setSearchText }) {
 							e.preventDefault();
 							history.push("/search");
 						}}>
+<<<<<<< HEAD:src/components/navbar.js
 						<div className="d-flex">
 							<Input
 								className="form-control me-2"
@@ -71,6 +102,21 @@ function Navbar({ searchText, setSearchText }) {
 						</div>
 					</Form>
 				</Collapse>
+=======
+						<input
+							className="form-control me-2"
+							type="search"
+							placeholder="Search"
+							aria-label="Search"
+							value={searchText}
+							onChange={updateSearchText}
+						/>
+						<button className="btn btn-outline-success" type="submit">
+							Search
+						</button>
+					</form>
+				</div>
+>>>>>>> 4572e46 (s):src/components/navbar.jsx
 			</div>
 		</ReactstrapNavbar>
 	);
